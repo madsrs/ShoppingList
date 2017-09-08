@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
 
     ArrayAdapter<String> adapter;
     ListView listView;
-    ArrayList<String> bag = new ArrayList<String>();
+    ArrayList<String> bag = new ArrayList<>();
 
     public ArrayAdapter getMyAdapter()
     {
@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
         listView = (ListView) findViewById(R.id.list);
         //here we create a new adapter linking the bag and the
         //listview
-        adapter =  new ArrayAdapter<String>(this,
+        adapter =  new ArrayAdapter<>(this,
                 android.R.layout.simple_list_item_checked,bag );
 
         //setting the adapter on the listview
