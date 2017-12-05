@@ -10,6 +10,8 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="org.projects.shoppinglist.MainActivity"
     tools:showIn="@layout/activity_main">
@@ -20,11 +22,37 @@
         android:layout_gravity="center"
         android:text="@string/welcome_to_my_shopping_list"/>
 
-    <Button
-        android:id="@+id/addButton"
-        android:text="Add to bag"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="100"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        >
+
+        <EditText
+            android:id="@+id/itemInput"
+            android:layout_weight="50"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/countInput"
+            android:layout_weight="10"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:inputType="phone"/>
+
+        <Button
+            android:id="@+id/addButton"
+            android:layout_weight="40"
+            android:text="@string/addButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
 
     <ListView
         android:id="@+id/list"
